@@ -108,3 +108,69 @@
 	left: 0;
 	padding: @uk-card-padding;
  }
+
+/* Horizontal Cards */
+ 
+.uk-card horizontal {
+  display: flex;
+}
+.uk-card .horizontal.small .uk-card-image, .horizontal.medium .uk-card-image, .horizontal.large .uk-card-image {
+  height: 100%;
+  max-height: none;
+  overflow: visible;
+}
+.uk-card .horizontal.small .uk-card-image img, .horizontal.medium .uk-card-image img, .horizontal.large .uk-card-image img {
+  height: 100%;
+}
+.uk-card .horizontal .card-image {
+  max-width: 50%;
+}
+
+.uk-card .horizontal .card-image img {
+  border-radius: 2px 0 0 2px;
+  max-width: 100%;
+  width: auto;
+}
+
+.uk-card .horizontal .card-stacked {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.uk-card .horizontal .card-stacked .card-content {
+  flex-grow: 1;
+}
+
+/* Cards sizes: small, medium and large */
+
+.uk-card.small, .uk-card.medium, .uk-card.large {
+  position: relative;
+}
+.uk-card.small .card-image, .uk-card.medium .card-image, .uk-card.large .card-image {
+  max-height: 60%;
+  overflow: hidden;
+}
+.uk-card.small .card-image + .card-content, .uk-card.medium .card-image + .card-content, .uk-card.large .card-image + .card-content {
+  max-height: 40%;
+}
+.uk-card.small .card-content, .uk-card.medium .card-content, .uk-card.large .card-content {
+  max-height: 100%;
+  overflow: hidden;
+}
+.uk-card.small .card-action, .uk-card.medium .card-action, .uk-card.large .card-action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.uk-card.small {
+  height: 300px;
+}
+.uk-card.medium {
+  height: 400px;
+}
+.uk-card.large {
+  height: 500px;
+}
