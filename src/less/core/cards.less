@@ -1,0 +1,84 @@
+// Name:            Cards
+// Description:     A convenient way to display content composes of different type of object (images, text and links)
+//
+// Component:       `uk-card`
+//
+// Modifiers:       `uk-card-panel`
+//                  `uk-card-title`
+//                  `uk-card-image`
+//                  `uk-card-content`
+//                  `uk-card-action`
+//                  `uk-card .horizontal`
+//                  `uk-card .small`
+//                  `uk-card .medium`
+//                  `uk-card .large`
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+@uk-special-width: 1.5rem !default;
+@uk-card-top-margin: @uk-special-width/3 !default;
+@uk-card-bottom-margin: (@uk-special-width*2)/3 !default;
+@uk-card-bg-color: #ffffff !default;
+@uk-card-padding: 20px !default;
+@uk-card-link-color: rgb(11,161,216) !default;
+@uk-card-link-color-light: rgb(61,192,241) !default;
+
+/* ========================================================================
+   Component: Cards
+ ========================================================================== */
+ 
+ .uk-card {
+	position: relative;
+	margin: @uk-card-top-margin 0 @uk-card-bottom-margin 0;
+	background-color: @uk-card-bg-color;
+	transition: box-shadow .25s;
+	border-radius: 2px;
+ }
+ 
+ .uk-card .uk-card-title`{
+	font-size: 24px;
+	font-weight: 300;
+ }
+ 
+ .uk-card .uk-card-title.activator {
+	cursor: pointer;
+ }
+ 
+ /* .uk-card-content */
+ 
+.uk-card .uk-card-content{
+	padding: @uk-card-padding;
+	border-radius: 0 0 2px 2px;
+ }
+ 
+.uk-card .uk-card-content p{
+	margin: 0;
+	color: inherit;
+ }
+ 
+.uk-card .uk-card-content .uk-card-title{
+	line-height: 48px;
+ }
+ 
+ /* .uk-card-action */
+ 
+ .uk-card .uk-card-action{
+	position: relative;
+	background-color: inherit;
+	border-top: 1px solid rgba(160,160,160,.2);
+	padding: @uk-card-padding;
+ }
+ 
+ .uk-card .uk-card-action a:not(.uk-button):not(.uk-button-large){
+	color: @uk-card-link-color;
+	margin-right: @uk-card-padding;
+	transition: color .3s ease;
+	text-transform: uppercase;
+ }
+ 
+ .uk-card .uk-card-action a:not(.uk-button):not(.uk-button-large):hover{
+	color: @uk-card-link-color-light;
+ }
